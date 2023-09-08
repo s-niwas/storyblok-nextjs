@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { storyblokInit, apiPlugin } from "@storyblok/react";
+import { StoryblokComponent } from "@storyblok/react";
 import Page from "../components/Page";
 import Blog from "../components/Blog";
 import Image from "../components/Image";
@@ -11,13 +12,14 @@ const components = {
   page: Page,
   image: Image,
   video: Video,
-  videoUrl:VideoLink,
+  videoUrl: VideoLink,
 };
 
 storyblokInit({
   accessToken: "arbCbDCfnc6lEjxTX1CTbAtt",
   use: [apiPlugin],
   components,
+  bridge: true,
   apiOptions: {
     region: "",
   },

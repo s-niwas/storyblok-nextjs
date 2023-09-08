@@ -1,10 +1,10 @@
-import { StoryblokComponent } from "@storyblok/react";
+import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
 
 import { NODE_CODEBLOCK, render } from "storyblok-rich-text-react-renderer";
 
 const RichText = ({ richText }) => {
   return (
-    <div className="prose-md flex justify-center flex-col prose-headings:font-heading text-3xl prose-headings:leading-tighter prose-lg relative text-justify  dark:prose-invert lg:prose-xl prose-headings:font-bold prose-headings:tracking-tighter prose-a:text-primary prose-li:list-disc prose-img:rounded-md prose-img:shadow-lg dark:prose-a:text-blue-400 sm:text-base md:ml-6 md:mt-0 lg:ml-12">
+    <div {...storyblokEditable(richText)} className="prose-md flex justify-center m-12 flex-col prose-headings:font-heading text-3xl prose-lg relative text-justify  dark:prose-invert lg:prose-xl prose-headings:font-bold  prose-a:text-primary prose-li:list-disc prose-img:rounded-md prose-img:shadow-lg dark:prose-a:text-blue-400 sm:text-base md:m-6 md:mt-0 lg:m-12">
       {render(richText, {
         nodeResolvers: {
           [NODE_CODEBLOCK]: (children) => {

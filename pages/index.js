@@ -12,8 +12,12 @@ export default function Home({ story }) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Storyblok with Nextjs</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="NextJS application created using storyblok"
+        />
       </Head>
       <StoryblokComponent blok={story.content} />
     </div>

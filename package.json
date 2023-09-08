@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@storyblok/react": "^2.0.0",
+    "@storyblok/react": "^2.4.7",
     "clone-deep": "^4.0.1",
     "local-ssl-proxy": "^2.0.5",
     "next": "^12.1.0",
