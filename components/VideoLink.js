@@ -1,15 +1,13 @@
 import { storyblokEditable } from "@storyblok/react";
 
 const VideoLink = ({ blok }) => {
-  console.log(blok.videoId);
   return (
-    <div {...storyblokEditable(blok)} class="flex justify-center">
+    <div {...storyblokEditable(blok)} className="flex justify-center">
       <iframe
-        src={blok.videoId.url}
-        frameborder="0"
+        src={blok.videoUrl.url}
         allow="accelerometer; autoplay; encrypted-media; gyroscope;"
-        allowfullscreen
-        class="aspect-video w-full"
+        allowFullScreen
+        className="aspect-video w-full"
       ></iframe>
     </div>
   );
